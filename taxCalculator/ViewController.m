@@ -38,21 +38,21 @@
 - (IBAction)onCalculateButtonTapped:(id)sender {
 
     NSString *enteredText = self.textField.text;
-    double enteredValue = enteredText.intValue;
+    double enterValue = enteredText.intValue;
 
     if (self.segmentControl.selectedSegmentIndex == 0) {
-        double result = enteredValue * self.caTax;
+        double result = enterValue * self.caTax;
         self.resultLabel.text = [NSString stringWithFormat:@"%.2f",result];
     }
     else if (self.segmentControl.selectedSegmentIndex == 1){
 
-        double result = enteredValue * self.chiTax;
+        double result = enterValue * self.chiTax;
         self.resultLabel.text = [NSString stringWithFormat:@"%.2f",result];
 
     }else{
 
 
-        double result = enteredValue * self.nyTax;
+        double result = enterValue * self.nyTax;
         self.resultLabel.text = [NSString stringWithFormat:@"%.2f",result];
 
     }
